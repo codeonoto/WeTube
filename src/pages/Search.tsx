@@ -9,6 +9,7 @@ import { useAppDispatch, useAppSelector } from '../store/hooks';
 import { HomePageVideos } from '../Types';
 import { useNavigate } from 'react-router-dom';
 import { getSearchPageVideos } from '../store/reducers/getSearchPageVideos';
+import { ModeToggle } from '@/components/ModeToggle';
 
 const Search = () => {
   const navigate = useNavigate();
@@ -32,7 +33,7 @@ const Search = () => {
         style={{ height: '92.5vh' }}>
         <Sidebar />
         {videos.length ? (
-          <div className='py-8 pl-8 flex flex-col gap-5 w-full'>
+          <div className=' pl-44 flex flex-col gap-5 w-full '>
             <InfiniteScroll
               dataLength={videos.length}
               next={() => dispatch(getSearchPageVideos(true))}
@@ -54,6 +55,9 @@ const Search = () => {
         ) : (
           <Spinner />
         )}
+      </div>
+      <div className='fixed bottom-4 right-4'>
+        <ModeToggle />
       </div>
     </div>
   );

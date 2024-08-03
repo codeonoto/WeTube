@@ -6,13 +6,13 @@ export default function SearchCard({ data }: { data: HomePageVideos }) {
   return (
     <div className='flex gap-3'>
       <div className='relative'>
-        <span className='absolute bottom-3 right-3 text-sm bg-gray-900 px-2 py-0.5 z-10'>
+        <span className='absolute bottom-2 right-2 text-sm bg-zinc-900 opacity-80 px-2 py-0.5 z-10 rounded-xl'>
           {data.videoDuration}
         </span>
         <Link to={`/watch/${data.videoId}`}>
           <img
             src={data.videoThumbnail}
-            className='h-52 w-96'
+            className='h-72 w-auto rounded-sm'
             alt='thumbnail'
           />
         </Link>
@@ -47,7 +47,7 @@ export default function SearchCard({ data }: { data: HomePageVideos }) {
             <span>{data.channelInfo.name}</span>
           </a>
         </div>
-        <div className='max-w-2xl line-clamp-2 text-sm text-gray-400'>
+        <div className='max-w-2xl line-clamp-1 text-sm text-gray-400'>
           <p>{data.videoDescription}</p>
         </div>
       </div>
