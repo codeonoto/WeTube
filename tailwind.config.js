@@ -73,5 +73,6 @@ export const theme = {
   },
 };
 import tailwindcssAnimate from 'tailwindcss-animate';
+// import lineclamp from '@tailwindcss/line-clamp';
 
 export const plugins = [tailwindcssAnimate];
