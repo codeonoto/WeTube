@@ -20,6 +20,9 @@ export const theme = {
       border: 'hsl(var(--border))',
       input: 'hsl(var(--input))',
       ring: 'hsl(var(--ring))',
+      blue: {
+        1: '#19BD8C',
+      },
       background: 'hsl(var(--background))',
       foreground: 'hsl(var(--foreground))',
       primary: {

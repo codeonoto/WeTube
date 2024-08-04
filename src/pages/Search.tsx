@@ -31,7 +31,7 @@ const Search = () => {
       <div
         className='flex'
         style={{ height: '92.5vh' }}>
-        <Sidebar />
+        <Sidebar activePage='Home' />
         {videos.length ? (
           <div className=' pl-44 flex flex-col gap-5 w-full '>
             <InfiniteScroll

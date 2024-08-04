@@ -84,7 +84,7 @@ export default function Navbar() {
         <IoAppsSharp />
         <div className='relative'>
           <BsBell />
-          <span className='absolute bottom-2 left-2 text-xs bg-orange-600 rounded-full px-1'>
+          <span className='absolute bottom-2 left-2 text-xs bg-blue-1 rounded-full px-1'>
             9+
           </span>
         </div>

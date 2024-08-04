@@ -7,7 +7,7 @@ import {
 import { YOUTUBE_API_URL } from './constants';
 import { Item, RecommendedVideos } from '../Types';
 
-const API_KEY = import.meta.env.REACT_APP_YOTUBE_API_KEY;
+const API_KEY = import.meta.env.REACT_APP_YOUTUBE_API_KEY;
 
 export const parseRecommendedData = async (items: Item[], videoId: string) => {
   try {

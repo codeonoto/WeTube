@@ -1,4 +1,5 @@
 import Card from '@/components/Card';
+import HomeSkeletonCard from '@/components/HomeSkeletonCard';
 import { ModeToggle } from '@/components/ModeToggle';
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
@@ -7,7 +8,7 @@ import { clearVideos, clearSearchTerm } from '@/store';
 import { useAppDispatch, useAppSelector } from '@/store/hooks';
 import { getHomePageVideos } from '@/store/reducers/getHomePageVideos';
 import { HomePageVideos } from '@/Types';
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 
 const Home = () => {
@@ -33,7 +34,7 @@ const Home = () => {
       <div
         className='flex'
         style={{ height: '92.5vh' }}>
-        <Sidebar />
+        <Sidebar activePage='Home' />
         {videos.length ? (
           <InfiniteScroll
             dataLength={videos.length}
@@ -41,7 +42,7 @@ const Home = () => {
             hasMore={videos.length < 500}
             loader={<Spinner />}
             height={860}>
-            <div className='grid gap-y-24 gap-x-4 grid-cols-5 p-10 relative right-2'>
+            <div className='grid gap-y-24 gap-x-6 grid-cols-5 p-10 '>
               {videos.map((item: HomePageVideos) => {
                 return (
                   <Card
@@ -53,7 +54,7 @@ const Home = () => {
             </div>
           </InfiniteScroll>
         ) : (
-          <Spinner />
+          <HomeSkeletonCard />
         )}
       </div>
 

@@ -13,7 +13,7 @@ const Card = ({ data }: { data: HomePageVideos }) => {
           <img
             src={data.videoThumbnail}
             alt={data.videoTitle}
-            className='h-42 w-72 rounded-sm'
+            className='h-40 w-72 rounded-sm'
           />
         </Link>
       </div>

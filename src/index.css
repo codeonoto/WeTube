@@ -67,6 +67,9 @@ body {
   }
 }
 
+
+
+
 ::-webkit-scrollbar {
   background-color: transparent;
   width: 0.3rem;
@@ -74,7 +77,7 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background-color: #b8b8b8;
-  border-radius: 1rem;
+  border-radius: 0.3rem;
 }
 
 @layer base {
